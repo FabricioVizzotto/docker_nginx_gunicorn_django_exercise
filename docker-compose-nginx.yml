@@ -1,0 +1,15 @@
+version: "3"
+services:
+  nginx:
+    command: bash -c "while true; do echo hello; sleep 2; done"
+    image: nginx_test
+    volumes:
+      - "./www:/var/www"
+      - "./conf.d:/etc/nginx/conf.d"
+      - "./sites-enabled:/etc/nginx/sites-enabled"
+  cmd:
+    image: nginx_test
+    volumes:
+      - "./www:/var/www"
+      - "./conf.d:/etc/nginx/conf.d"
+      - "./sites-enabled:/etc/nginx/sites-enabled"
