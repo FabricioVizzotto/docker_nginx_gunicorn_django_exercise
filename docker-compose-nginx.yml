@@ -5,11 +5,9 @@ services:
     image: nginx_test
     volumes:
       - "./www:/var/www"
-      - "./conf.d:/etc/nginx/conf.d"
-      - "./sites-enabled:/etc/nginx/sites-enabled"
+      - "./nginx:/etc/nginx"
   cmd:
     image: nginx_test
     volumes:
       - "./www:/var/www"
-      - "./conf.d:/etc/nginx/conf.d"
-      - "./sites-enabled:/etc/nginx/sites-enabled"
+      - "./nginx:/etc/nginx"
